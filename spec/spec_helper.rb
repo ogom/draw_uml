@@ -1,0 +1,1 @@
+require 'draw_uml'
