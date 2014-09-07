@@ -1,4 +1,6 @@
-# DrawUml
+# Draw UML
+
+[![Gem Version](https://badge.fury.io/rb/draw_uml.png)](https://rubygems.org/gems/draw_uml) [![Build Status](https://travis-ci.org/ogom/draw_uml.png?branch=master)](https://travis-ci.org/ogom/draw_uml)
 
 TODO: Write a gem description
 

@@ -1,4 +1,5 @@
 .bundle
 pkg
+public
 tmp
 Gemfile.lock
