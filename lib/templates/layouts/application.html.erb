@@ -5,6 +5,10 @@
 </head>
 <body>
 
+<% files.each_with_index do |item, idx| %>
+  <a href="./?id=<%= idx %>"><%= item %></a><br>
+<% end %>
+
 <img src=<%= path %>>
 
 </body>
