@@ -13,8 +13,12 @@ module DrawUml
         @keys ||= %i[diagram_extension diagram_path static_path image_path]
       end
 
+      def source_path
+        File.expand_path(self.diagram_path)
+      end
+
       def source_file
-        Dir[File.expand_path('**/*.' + self.diagram_extension, self.diagram_path)]
+        Dir[File.join(self.source_path, '**/*.' + self.diagram_extension)]
       end
 
       def dest_path

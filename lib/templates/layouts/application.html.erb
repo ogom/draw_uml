@@ -1,15 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>UML</title>
+<head><title>Diagrams</title>
+<style type="text/css">
+  div.diagrams {
+    padding-top: 20px;
+    float:left;
+  }
+
+  div.draw img {
+    padding-top: 40px;
+    padding-left: 80px;
+  }
+</style>
 </head>
 <body>
 
-<% files.each_with_index do |item, idx| %>
-  <a href="./?id=<%= idx %>"><%= item %></a><br>
-<% end %>
+<div class='diagrams'>
+  <% files.each_with_index do |item, idx| %>
+    <a href="<%= request.path %>?id=<%= idx %>"><%= item %></a><br>
+  <% end %>
+</div>
 
-<img src=<%= path %>>
+<div class='draw'>
+  <img src=<%= image_path %>>
+</div>
 
 </body>
 </html>

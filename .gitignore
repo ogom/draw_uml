@@ -1,6 +1,6 @@
 .bundle
-doc
-pkg
-public
-tmp
+/doc
+/pkg
+/public
+/tmp
 Gemfile.lock

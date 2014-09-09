@@ -4,6 +4,7 @@ require_relative 'draw_uml/version'
 require_relative 'draw_uml/configure'
 require_relative 'draw_uml/default'
 require_relative 'draw_uml/engine'
+require_relative 'draw_uml/tree'
 require_relative 'draw_uml/diagram'
 
 module DrawUml

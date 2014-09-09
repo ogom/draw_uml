@@ -3,7 +3,7 @@ module DrawUml
     DIAGRAM_EXTENSION = 'uml'.freeze
     DIAGRAM_PATH = 'doc/diagrams/uml'.freeze
     STATIC_PATH = 'public'.freeze
-    IMAGE_PATH = 'images/uml'.freeze
+    IMAGE_PATH = '/images/uml'.freeze
 
     class << self
       def options
