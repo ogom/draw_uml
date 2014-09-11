@@ -17,8 +17,8 @@ module DrawUml
         File.expand_path(self.diagram_path)
       end
 
-      def source_file
-        Dir[File.join(self.source_path, '**/*.' + self.diagram_extension)]
+      def parent_path
+        File.expand_path('..', self.source_path)
       end
 
       def dest_path
