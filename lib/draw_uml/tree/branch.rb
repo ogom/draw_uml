@@ -13,6 +13,13 @@ module DrawUml
         false
       end
 
+      def each(&block)
+        entries.each do |entry|
+          block.call(entry)
+          entry.each(&block) if entry.is_a?(DrawUml::Tree::Branch)
+        end
+      end
+
       private
         def node
           Dir[File.join(path, '*')].each do |path|

@@ -17,10 +17,6 @@ module DrawUml
         File.expand_path(self.diagram_path)
       end
 
-      def parent_path
-        File.expand_path('..', self.source_path)
-      end
-
       def dest_path
         File.expand_path(File.join(self.static_path, self.image_path))
       end

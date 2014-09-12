@@ -7,11 +7,17 @@ module DrawUml
       FileUtils.mkdir_p(@path)
     end
 
-    def create(file)
-      raw = File.read(file)
-      filename = File.basename(file, '.*')
-      cmd = 'plantuml -pipe > ' + File.join(@path, filename + '.png')
+    def create(path)
+      file = File.join(@path, path + '.png')
+      raw = File.read(File.join(config.source_path, path + '.' + config.diagram_extension))
+      FileUtils.mkdir_p(File.dirname(file))
+
+      cmd = 'plantuml -pipe > ' + file
       stdout, status = Open3.capture2(cmd, stdin_data: raw)
+    end
+
+    def config
+      DrawUml::Configure
     end
   end
 end
