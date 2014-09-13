@@ -27,11 +27,14 @@
 
   div.diagrams {
     float:left;
+    padding-right: 30px;
+    padding-bottom: 10px;
+    border-right: solid #eee;
   }
 
   div.draw img {
     padding-top: 40px;
-    padding-left: 60px;
+    padding-left: 20px;
   }
 </style>
 </head>
@@ -39,11 +42,11 @@
   <h2>Unified Modeling Language</h2>
 
   <div class='diagrams'>
-    <%= diagrams %>
+    <%= diagram_tag %>
   </div>
 
   <div class='draw'>
-    <img src=<%= path %>>
+    <img src=<%= image_path %>>
   </div>
 </body>
 </html>

@@ -3,51 +3,75 @@ require 'erb'
 
 module DrawUml
   class Engine
-    class << self
-      def call(env)
-        @request = Rack::Request.new(env)
-        id = @request.params['id'] ||= nil
+    attr_accessor :request, :tree
+
+    def call(env)
+      @request = Rack::Request.new(env)
+      @tree = DrawUml::Tree.create(DrawUml::Configure.source_path)
+
+      status = 200
+      headers = {'Content-Type' => 'text/html'}
+      body = ERB.new(DrawUml::Configure.application_template).result(binding)
+
+      [status, headers, [body]]
+    end
+
+    private
+      def image_path
         path = nil
-
-        unless id.nil?
+        entry = find_entry(request.path_info)
+        unless entry.nil?
+          file = entry.id + '.png'
+          path = File.join(DrawUml::Configure.image_path, file)
           diagram = DrawUml::Diagram.new(DrawUml::Configure.dest_path)
-          diagram.create(id)
-          path = File.join(DrawUml::Configure.image_path, id + '.png')
+          diagram.create(entry.path, file)
         end
-
-        erb = ERB.new(DrawUml::Configure.application_template)
-        body = erb.result(binding)
-
-        status = 200
-        headers = {'Content-Type' => 'text/html'}
-        [status, headers, [body]]
+        path
       end
 
-      private
-        def diagrams
-          @raw = ''
-          branch(DrawUml::Tree.create(DrawUml::Configure.source_path))
-          @raw
-        end
-
-        def branch(node)
-          @raw += "<div style=\"padding-left: #{node.level}0px;\">\n"
-          @raw += "<h3>#{node.name}</h3>\n"
-          arr = []
-          node.entries.each do |entry|
-            if entry.leaf?
-              arr << entry
-            else
-              branch(entry)
-            end
+      def find_entry(id)
+        raw = nil
+        tree.each do |entry|
+          if entry.id == id
+            raw = entry
+            break
           end
-          @raw += "<ul>"
-          @raw += arr.map do |entry|
-            "<li><a href=#{@request.path}?id=#{entry.id}>#{entry.name}</a></li>"
-          end.join("\n")
-          @raw += "</ul></div>\n"
         end
-      # end private
+        raw
+      end
+
+      def diagram_tag
+        render_branch(tree)
+      end
+
+      def render_branch(node)
+        raw = ''
+        raw += "<div style=\"padding-left: #{node.level}0px;\">\n"
+        raw += "<h3>#{node.name}</h3>\n"
+        arr = []
+        node.entries.each do |entry|
+          if entry.leaf?
+            arr << entry
+          else
+            raw += render_branch(entry)
+          end
+        end
+        raw += "<ul>" + arr.map do |entry|
+          "<li><a href=#{request.script_name}#{entry.id}>#{entry.name}</a></li>"
+        end.join("\n")
+        raw += "</ul></div>\n"
+        raw
+      end
+    # end private
+
+    class << self
+      def prototype
+        @prototype ||= new
+      end
+
+      def call(env)
+        prototype.call(env)
+      end
     end
   end
 end

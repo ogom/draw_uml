@@ -3,9 +3,9 @@ module DrawUml
     class Branch < DrawUml::Tree::Leaf
       attr_reader :entries
 
-      def initialize(name, level=0)
-        @entries = []
+      def initialize(path, level=0, trunk=nil)
         super
+        @entries = []
         node
       end
 
@@ -24,9 +24,9 @@ module DrawUml
         def node
           Dir[File.join(path, '*')].each do |path|
             if File.directory?(path)
-              entries << DrawUml::Tree::Branch.new(path, level+1)
+              entries << DrawUml::Tree::Branch.new(path, level, trunk)
             else
-              entries << DrawUml::Tree::Leaf.new(path, level+1)
+              entries << DrawUml::Tree::Leaf.new(path, level, trunk)
             end
           end
         end

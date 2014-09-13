@@ -1,15 +1,20 @@
 module DrawUml
   module Tree
     class Leaf
-      attr_reader :name, :path, :level, :id
+      attr_reader :name, :path, :level, :trunk, :id
 
-      def initialize(name, level=0)
-        @name = File.basename(name, '.*')
-        @path = File.expand_path(name)
-        @level = level
+      def initialize(path, level=0, trunk=nil)
+        @name = File.basename(path, '.*')
+        @path = File.expand_path(path)
 
-        raw = path.sub(DrawUml::Configure.source_path, '')
-        @id = raw.sub('.' + DrawUml::Configure.diagram_extension, '')
+        if trunk.nil?
+          @level = level
+          @trunk = path
+        else
+          @level = level + 1
+          @trunk = trunk
+          @id = "#{File.dirname(@path)}/#{@name}".sub(trunk, '')
+        end
       end
 
       def leaf?
