@@ -21,10 +21,9 @@ module DrawUml
         path = nil
         entry = find_entry(request.path_info)
         unless entry.nil?
-          file = entry.id + '.png'
-          path = File.join(DrawUml::Configure.image_path, file)
           diagram = DrawUml::Diagram.new(DrawUml::Configure.dest_path)
-          diagram.create(entry.path, file)
+          diagram.create(entry.path, entry.id)
+          path = File.join(DrawUml::Configure.image_path, entry.id + '.png')
         end
         path
       end
@@ -47,7 +46,8 @@ module DrawUml
       def render_branch(node)
         raw = ''
         raw += "<div style=\"padding-left: #{node.level}0px;\">\n"
-        raw += "<h3>#{node.name}</h3>\n"
+        raw += "<h3 onclick=\"check_branch('#{node.id}')\" >#{node.name}</h3>\n"
+        raw += "<div id=#{node.id}>\n"
         arr = []
         node.entries.each do |entry|
           if entry.leaf?
@@ -59,7 +59,7 @@ module DrawUml
         raw += "<ul>" + arr.map do |entry|
           "<li><a href=#{request.script_name}#{entry.id}>#{entry.name}</a></li>"
         end.join("\n")
-        raw += "</ul></div>\n"
+        raw += "</ul></div></div>\n"
         raw
       end
     # end private

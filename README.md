@@ -2,32 +2,40 @@
 
 [![Gem Version](https://badge.fury.io/rb/draw_uml.png)](https://rubygems.org/gems/draw_uml) [![Build Status](https://travis-ci.org/ogom/draw_uml.png?branch=master)](https://travis-ci.org/ogom/draw_uml)
 
-TODO: Write a gem description
+Drawing the Unified Modeling Language of Rack.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
-```ruby
+```
 gem 'draw_uml'
 ```
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install draw_uml
+```
+$ bundle
+```
 
 ## Usage
 
-TODO: Write usage instructions here
+### Rails
 
-## Contributing
+Add this line to your `config/routes.rb`:
 
-1. Fork it ( https://github.com/[my-github-username]/draw_uml/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create a new Pull Request
+```
+mount DrawUml::Engine, at: '/rails/draw/uml'
+```
+
+Draw by selecting the model:
+
+![example_uml](http://ogom.github.io/draw_uml/assets/img/example_uml.png)
+
+## Use
+
+* [PlantUML](http://plantuml.sourceforge.net/)
+
+## License
+
+* MIT

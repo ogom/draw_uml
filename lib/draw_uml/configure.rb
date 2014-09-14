@@ -7,6 +7,8 @@ module DrawUml
         keys.each do |key|
           instance_variable_set(:"@#{key}", DrawUml::Default.send(key))
         end
+
+        FileUtils.mkdir_p(self.source_path)
       end
 
       def keys
@@ -14,19 +16,23 @@ module DrawUml
       end
 
       def source_path
-        File.expand_path(self.diagram_path)
+        @source_path ||= File.expand_path(self.diagram_path)
       end
 
       def dest_path
-        File.expand_path(File.join(self.static_path, self.image_path))
+        @dest_path ||= File.expand_path(File.join(self.static_path, self.image_path))
       end
 
       def templates_path
-        DrawUml.root.join('lib', 'templates').to_s
+        @templates_path ||= DrawUml.root.join('lib', 'templates').to_s
+      end
+
+      def application_layout
+        @application_layout ||= File.expand_path('application.html.erb', File.join(self.templates_path, 'layouts'))
       end
 
       def application_template
-        File.read(File.expand_path('application.html.erb', File.join(self.templates_path, 'layouts')))
+        File.read(self.application_layout)
       end
     end
   end

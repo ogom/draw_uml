@@ -10,6 +10,7 @@ module DrawUml
         if trunk.nil?
           @level = level
           @trunk = path
+          @id = :root
         else
           @level = level + 1
           @trunk = trunk

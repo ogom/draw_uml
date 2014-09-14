@@ -37,9 +37,22 @@
     padding-left: 20px;
   }
 </style>
+
+<script type="text/ecmascript">
+  function check_branch(id) {
+    console.log(id);
+    var element = document.getElementById(id);
+    if (element.style.display == 'none') {
+      element.style.display = 'block';
+    } else {
+      element.style.display = 'none';
+    }
+  }
+</script>
 </head>
 <body>
-  <h2>Unified Modeling Language</h2>
+  <h2>Models</h2>
+  <p>Drawing the Unified Modeling Language</p>
 
   <div class='diagrams'>
     <%= diagram_tag %>
