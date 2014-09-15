@@ -5,9 +5,9 @@ title:  PlantUML
 
 [PlantUML](http://plantuml.sourceforge.net/) is a component that allows to quickly write.
 
-## Basic
+# Basic
 
-### Common
+## Common
 
 Use common.
 
@@ -19,7 +19,7 @@ Use common.
 | `' `           | Single-line Comment |
 | `/' '/`        | Block Comment       |
 
-#### Code
+### Code
 
 ```
 title Title
@@ -37,11 +37,11 @@ note right : Note
 '/
 ```
 
-#### Draw
+### Draw
 
 ![basic_common]({{ site.baseurl }}/assets/img/diagrams/basic/common.png)
 
-### Participant
+## Participant
 
 Use participant.
 
@@ -53,7 +53,7 @@ Use participant.
 | `entity`   | Entity   | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/entity.png)
 | `database` | Database | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/database.png)
 
-#### Code
+### Code
 
 ```
 actor Actor
@@ -65,13 +65,13 @@ database Database
 :Actor alias:
 ```
 
-#### Draw
+### Draw
 
 ![basic_participant]({{ site.baseurl }}/assets/img/diagrams/basic/participant.png)
 
-## UML
+# UML
 
-### Use Case
+## Use Case
 
 Represent the required functions.
 
@@ -83,7 +83,7 @@ Represent the required functions.
 
 * [others](http://plantuml.sourceforge.net/usecase.html)
 
-#### Code
+### Code
 
 ```
 actor Promoter
@@ -100,11 +100,11 @@ Promoter --> (Attend Event)
 (Attend Event) <.. (Create Member)  : <<include>>
 ```
 
-#### Draw
+### Draw
 
 ![usecase_diagram]({{ site.baseurl }}/assets/img/diagrams/usecase.png)
 
-### Activity
+## Activity
 
 Represent the state of the process.
 
@@ -116,7 +116,7 @@ Represent the state of the process.
 
 * [others](http://plantuml.sourceforge.net/activity.html)
 
-#### Code
+### Code
 
 ```
 (*) --> "Find Event"
@@ -139,11 +139,11 @@ endif
 "Show Ticket" --> (*)
 ```
 
-#### Draw
+### Draw
 
 ![activity_diagram]({{ site.baseurl }}/assets/img/diagrams/activity.png)
 
-### State
+## State
 
 Represent the state of the objects.
 
@@ -156,7 +156,7 @@ Represent the state of the objects.
 
 * [others](http://plantuml.sourceforge.net/state.html)
 
-#### Code
+### Code
 
 ```
 [*] --> active
@@ -170,11 +170,11 @@ active --> closed  : close
 closed --> [*]
 ```
 
-#### Draw
+### Draw
 
 ![state_diagram]({{ site.baseurl }}/assets/img/diagrams/state.png)
 
-### Sequence
+## Sequence
 
 Represent the messages and  orders of the interacts.
 
@@ -185,7 +185,7 @@ Represent the messages and  orders of the interacts.
 
 * [others](http://plantuml.sourceforge.net/sequence.html)
 
-#### Code
+### Code
 
 ```
 actor Entrant
@@ -205,11 +205,11 @@ Entrant <-- Ticket : Attend Event Response
 deactivate Ticket
 ```
 
-#### Draw
+### Draw
 
 ![sequence_diagram]({{ site.baseurl }}/assets/img/diagrams/sequence.png)
 
-### Object
+## Object
 
 Represent the logical view of the object.
 
@@ -222,7 +222,7 @@ Represent the logical view of the object.
 
 * [others](http://plantuml.sourceforge.net/objects.html)
 
-#### Code
+### Code
 
 ```
 object User
@@ -241,11 +241,11 @@ Event o.. Ticket
 Member . Ticket
 ```
 
-#### Draw
+### Draw
 
 ![object_diagram]({{ site.baseurl }}/assets/img/diagrams/object.png)
 
-### Class
+## Class
 
 Represent the logical view of the class.
 
@@ -278,11 +278,11 @@ User .. Member
 Group .. Member
 ```
 
-#### Draw
+### Draw
 
 ![class_diagram]({{ site.baseurl }}/assets/img/diagrams/class.png)
 
-### Component
+## Component
 
 Represent the dependency of the components.
 
@@ -298,7 +298,7 @@ Represent the dependency of the components.
 
 * [others](http://plantuml.sourceforge.net/component.html)
 
-#### Code
+### Code
 
 ```
 cloud "Cloud" {
@@ -323,6 +323,6 @@ node "Node" {
 [backup] .. [File] : FTP
 ```
 
-#### Draw
+### Draw
 
 ![component_diagram]({{ site.baseurl }}/assets/img/diagrams/component.png)

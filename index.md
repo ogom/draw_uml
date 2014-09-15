@@ -23,6 +23,26 @@ $ bundle
 
 ## Usage
 
+### Rack
+
+Put this line to your `config.ru`:
+
+```
+require 'draw_uml'
+use Rack::Static, urls: ['/images'], root: 'public'
+run DrawUml::Engine
+```
+
+And then execute:
+
+```
+$ rackup
+```
+
+Draw by selecting the model:
+
+![sequence_diagram]({{ site.baseurl }}/assets/img/diagrams/sequence.png)
+
 ### Rails
 
 Add this line to your `config/routes.rb`:
@@ -30,10 +50,6 @@ Add this line to your `config/routes.rb`:
 ```
 mount DrawUml::Engine, at: '/rails/draw/uml'
 ```
-
-Draw by selecting the model:
-
-![sequence_diagram]({{ site.baseurl }}/assets/img/diagrams/sequence.png)
 
 ## Use
 
