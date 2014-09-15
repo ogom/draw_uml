@@ -1,0 +1,13 @@
+---
+markdown: kramdown
+kramdown:
+  input: GFM
+pygments: true
+baseurl: "/draw_uml"
+encoding: UTF-8
+exclude:
+- README.md
+- tmp
+name: Draw UML
+copyright: 2014, ogom
+theme: cosmo
