@@ -161,8 +161,8 @@ Represent the state of the objects.
 ```
 [*] --> active
 
-active -right-> inactive : enable
-inactive -left-> active  : disable
+active -right-> inactive : disable
+inactive -left-> active  : enable
 
 inactive --> closed  : close
 active --> closed  : close
@@ -249,15 +249,17 @@ Member . Ticket
 
 Represent the logical view of the class.
 
-| keyword | usage       | image
-|:-------:|:-----------:|
-| `class` | Class       | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/class.png)
-| `+`     | Extension   | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/public_visibility.png)
-| `-`     | Composition | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/private_visibility.png)
-| `#`     | Agregation  | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/protected_visibility.png)
-| `~`     | Agregation  | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/package_visibility.png)
+| keyword | usage     | image
+|:-------:|:---------:|
+| `class` | Class     | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/class.png)
+| `+`     | Public    | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/public_visibility.png)
+| `-`     | Private   | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/private_visibility.png)
+| `#`     | Protected | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/protected_visibility.png)
+| `~`     | Package   | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/package_visibility.png)
 
 * [others](http://plantuml.sourceforge.net/class.html)
+
+### Code
 
 ```
 class User {

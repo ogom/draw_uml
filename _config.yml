@@ -8,6 +8,6 @@ encoding: UTF-8
 exclude:
 - README.md
 - tmp
-name: Draw UML
+name: DrawUML
 copyright: 2014, ogom
 theme: cosmo
