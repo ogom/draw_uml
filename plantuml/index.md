@@ -4,12 +4,13 @@ title:  PlantUML
 ---
 
 [PlantUML](http://plantuml.sourceforge.net/) is a component that allows to quickly write.
+This is cheat sheet of PlantUML to use frequently.
 
 # Basic
 
 ## Common
 
-Use common.
+Notes and Comments.
 
 | keyword        | usage               | image
 |:--------------:|:-------------------:|
@@ -43,7 +44,7 @@ note right : Note
 
 ## Participant
 
-Use participant.
+Participant actors.
 
 | keyword    | usage    | image
 |:----------:|:--------:|
@@ -69,6 +70,32 @@ database Database
 
 ![basic_participant]({{ site.baseurl }}/assets/img/diagrams/basic/participant.png)
 
+
+## Arrow
+
+Arrow direction.
+
+| keyword    | usage   | image
+|:----------:|:-------:|
+| `-up->`    | Up      | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/up_line.png)
+| `-down->`  | Down    | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/down_line.png)
+| `-left->`  | Left    | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/left_line.png)
+| `-right->` | Right   | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/right_line.png)
+
+### Code
+
+```
+up -up-> right
+-right-> down
+-down-> left
+-left-> up
+```
+
+### Draw
+
+![basic_participant]({{ site.baseurl }}/assets/img/diagrams/basic/arrow.png)
+
+
 # UML
 
 ## Use Case
@@ -89,14 +116,12 @@ Represent the required functions.
 actor Promoter
 actor Entrant
 
-Promoter -> (Create Group)
-Promoter -> (Create Event)
-(Create Group) .> (Create Event) : <<extend>>
+Promoter --> (Create Event)
+Promoter -> (Attend Event)
 
-Promoter --> (Attend Event)
-
-(Find Event) <- Entrant
+Entrant --> (Find Event)
 (Attend Event) <- Entrant
+
 (Attend Event) <.. (Create Member)  : <<include>>
 ```
 
@@ -147,12 +172,10 @@ endif
 
 Represent the state of the objects.
 
-| keyword    | usage | image
-|:----------:|:-----:|
-| `-up->`    | Up    | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/up_line.png)
-| `-down->`  | Down  | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/down_line.png)
-| `-left->`  | Left  | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/left_line.png)
-| `-right->` | Right | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/right_line.png)
+| keyword    | usage   | image
+|:----------:|:-------:|
+|  `[*] ->`  | Initial | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/initial_line.png)
+|  `-> [*]`  | Final   | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/final_line.png)
 
 * [others](http://plantuml.sourceforge.net/state.html)
 
