@@ -57,7 +57,9 @@ module DrawUml
           end
         end
         raw += "<ul>" + arr.map do |entry|
-          "<li><a href=#{request.script_name}#{entry.id}>#{entry.name}</a></li>"
+          raw = "<li"
+          raw += " class='active'"if entry.id == request.path_info
+          raw += "><a href=#{request.script_name}#{entry.id}>#{entry.name}</a></li>"
         end.join("\n")
         raw += "</ul></div></div>\n"
         raw
