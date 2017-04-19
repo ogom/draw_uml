@@ -3,4 +3,5 @@
 /pkg
 /public
 /tmp
+_site
 Gemfile.lock
