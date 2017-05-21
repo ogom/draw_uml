@@ -2,6 +2,6 @@
 - label: Changelog
   path: "/changelog"
 - label: Documentation
-  path: "/doc"
+  path: "/docs"
 - label: PlantUML
   path: "/plantuml"

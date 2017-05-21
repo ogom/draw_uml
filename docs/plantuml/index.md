@@ -48,11 +48,11 @@ Participant actors.
 
 | keyword    | usage    | image
 |:----------:|:--------:|
-| `actor`    | Actor    | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/actor.png)
-| `boundary` | Boundary | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/boundary.png)
-| `control`  | Control  | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/control.png)
-| `entity`   | Entity   | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/entity.png)
-| `database` | Database | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/database.png)
+| `actor`    | Actor    | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/element/actor.png)
+| `boundary` | Boundary | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/element/boundary.png)
+| `control`  | Control  | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/element/control.png)
+| `entity`   | Entity   | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/element/entity.png)
+| `database` | Database | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/package/database.png)
 
 ### Code
 
@@ -314,12 +314,12 @@ Represent the dependency of the components.
 | keyword    | usage      | image
 |:----------:|:----------:|
 | `[ ]`      | Component  | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/component.png)
-| `package`  | Package    | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/package.png)
-| `frame`    | Frame      | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/frame.png)
-| `folder`   | Folder     | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/folder.png)
-| `database` | Database   | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/database.png)
-| `node`     | Node       | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/node.png)
-| `cloud`    | Cloud      | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/parts/cloud.png)
+| `package`  | Package    | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/package/package.png)
+| `frame`    | Frame      | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/package/frame.png)
+| `folder`   | Folder     | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/package/folder.png)
+| `database` | Database   | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/package/database.png)
+| `node`     | Node       | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/package/node.png)
+| `cloud`    | Cloud      | ![parts_usecase]({{ site.baseurl }}/assets/img/diagrams/package/cloud.png)
 
 * [others](http://plantuml.sourceforge.net/component.html)
 
