@@ -14,9 +14,9 @@ Notes and Comments.
 
 | keyword        | usage               | image
 |:--------------:|:-------------------:|
-| `title`        | Title               | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/title.png)
-| `note left :`  | Notes Left          | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/note_left.png)
-| `note right :` | Notes Right         | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/note_right.png)
+| `title`        | Title               | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/title.png)
+| `note left :`  | Notes Left          | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/note_left.png)
+| `note right :` | Notes Right         | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/note_right.png)
 | `' `           | Single-line Comment |
 | `/' '/`        | Block Comment       |
 
@@ -40,7 +40,7 @@ note right : Note
 
 ### Draw
 
-![basic_common]({{ site.docsurl }}/assets/img/diagrams/basic/common.png)
+![basic_common](/draw_uml/docs/assets/img/diagrams/basic/common.png)
 
 ## Participant
 
@@ -48,11 +48,11 @@ Participant actors.
 
 | keyword    | usage    | image
 |:----------:|:--------:|
-| `actor`    | Actor    | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/element/actor.png)
-| `boundary` | Boundary | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/element/boundary.png)
-| `control`  | Control  | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/element/control.png)
-| `entity`   | Entity   | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/element/entity.png)
-| `database` | Database | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/package/database.png)
+| `actor`    | Actor    | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/element/actor.png)
+| `boundary` | Boundary | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/element/boundary.png)
+| `control`  | Control  | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/element/control.png)
+| `entity`   | Entity   | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/element/entity.png)
+| `database` | Database | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/package/database.png)
 
 ### Code
 
@@ -68,7 +68,7 @@ database Database
 
 ### Draw
 
-![basic_participant]({{ site.docsurl }}/assets/img/diagrams/basic/participant.png)
+![basic_participant](/draw_uml/docs/assets/img/diagrams/basic/participant.png)
 
 
 ## Arrow
@@ -77,10 +77,10 @@ Arrow direction.
 
 | keyword    | usage   | image
 |:----------:|:-------:|
-| `-up->`    | Up      | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/up_line.png)
-| `-down->`  | Down    | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/down_line.png)
-| `-left->`  | Left    | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/left_line.png)
-| `-right->` | Right   | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/right_line.png)
+| `-up->`    | Up      | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/up_line.png)
+| `-down->`  | Down    | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/down_line.png)
+| `-left->`  | Left    | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/left_line.png)
+| `-right->` | Right   | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/right_line.png)
 
 ### Code
 
@@ -93,7 +93,7 @@ up -up-> right
 
 ### Draw
 
-![basic_participant]({{ site.docsurl }}/assets/img/diagrams/basic/arrow.png)
+![basic_participant](/draw_uml/docs/assets/img/diagrams/basic/arrow.png)
 
 
 # UML
@@ -104,9 +104,9 @@ Represent the required functions.
 
 | keyword | usage    | image
 |:-------:|:--------:|
-|  `( )`  | Use Case | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/usecase.png)
-|  `->`   | Use      | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/use_line.png)
-|  `.>`   | Extend, Include | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/ext_line.png)
+|  `( )`  | Use Case | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/usecase.png)
+|  `->`   | Use      | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/use_line.png)
+|  `.>`   | Extend, Include | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/ext_line.png)
 
 * [others](http://plantuml.sourceforge.net/usecase.html)
 
@@ -127,7 +127,7 @@ Entrant --> (Find Event)
 
 ### Draw
 
-![usecase_diagram]({{ site.docsurl }}/assets/img/diagrams/usecase.png)
+![usecase_diagram](/draw_uml/docs/assets/img/diagrams/usecase.png)
 
 ## Activity
 
@@ -135,9 +135,9 @@ Represent the state of the process.
 
 | keyword   | usage    | image
 |:---------:|:--------:|
-|  `" "`    | Activity | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/activity.png)
-|  `(*) ->` | Initial  | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/initial_line.png)
-|  `-> (*)` | Final    | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/final_line.png)
+|  `" "`    | Activity | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/activity.png)
+|  `(*) ->` | Initial  | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/initial_line.png)
+|  `-> (*)` | Final    | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/final_line.png)
 
 * [others](http://plantuml.sourceforge.net/activity.html)
 
@@ -166,7 +166,7 @@ endif
 
 ### Draw
 
-![activity_diagram]({{ site.docsurl }}/assets/img/diagrams/activity.png)
+![activity_diagram](/draw_uml/docs/assets/img/diagrams/activity.png)
 
 ## State
 
@@ -174,8 +174,8 @@ Represent the state of the objects.
 
 | keyword    | usage   | image
 |:----------:|:-------:|
-|  `[*] ->`  | Initial | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/initial_line.png)
-|  `-> [*]`  | Final   | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/final_line.png)
+|  `[*] ->`  | Initial | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/initial_line.png)
+|  `-> [*]`  | Final   | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/final_line.png)
 
 * [others](http://plantuml.sourceforge.net/state.html)
 
@@ -195,7 +195,7 @@ closed --> [*]
 
 ### Draw
 
-![state_diagram]({{ site.docsurl }}/assets/img/diagrams/state.png)
+![state_diagram](/draw_uml/docs/assets/img/diagrams/state.png)
 
 ## Sequence
 
@@ -203,8 +203,8 @@ Represent the messages and  orders of the interacts.
 
 | keyword  | usage   | image
 |:--------:|:-------:|
-| `->`     | Message | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/message_line.png)
-| `<--`    | Return  | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/return_line.png)
+| `->`     | Message | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/message_line.png)
+| `<--`    | Return  | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/return_line.png)
 
 * [others](http://plantuml.sourceforge.net/sequence.html)
 
@@ -230,7 +230,7 @@ deactivate Ticket
 
 ### Draw
 
-![sequence_diagram]({{ site.docsurl }}/assets/img/diagrams/sequence.png)
+![sequence_diagram](/draw_uml/docs/assets/img/diagrams/sequence.png)
 
 ## Object
 
@@ -238,10 +238,10 @@ Represent the logical view of the object.
 
 | keyword  | usage       | image
 |:--------:|:-----------:|
-| `object` | Object      | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/object.png)
-| `<|-`    | Extension   | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/extension_line.png)
-| `*-`     | Composition | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/composition_line.png)
-| `o-`     | Agregation  | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/agregation_line.png)
+| `object` | Object      | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/object.png)
+| `<|-`    | Extension   | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/extension_line.png)
+| `*-`     | Composition | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/composition_line.png)
+| `o-`     | Agregation  | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/agregation_line.png)
 
 * [others](http://plantuml.sourceforge.net/objects.html)
 
@@ -266,7 +266,7 @@ Member . Ticket
 
 ### Draw
 
-![object_diagram]({{ site.docsurl }}/assets/img/diagrams/object.png)
+![object_diagram](/draw_uml/docs/assets/img/diagrams/object.png)
 
 ## Class
 
@@ -274,11 +274,11 @@ Represent the logical view of the class.
 
 | keyword | usage     | image
 |:-------:|:---------:|
-| `class` | Class     | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/class.png)
-| `+`     | Public    | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/public_visibility.png)
-| `-`     | Private   | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/private_visibility.png)
-| `#`     | Protected | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/protected_visibility.png)
-| `~`     | Package   | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/package_visibility.png)
+| `class` | Class     | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/class.png)
+| `+`     | Public    | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/public_visibility.png)
+| `-`     | Private   | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/private_visibility.png)
+| `#`     | Protected | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/protected_visibility.png)
+| `~`     | Package   | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/package_visibility.png)
 
 * [others](http://plantuml.sourceforge.net/class.html)
 
@@ -305,7 +305,7 @@ Group .. Member
 
 ### Draw
 
-![class_diagram]({{ site.docsurl }}/assets/img/diagrams/class.png)
+![class_diagram](/draw_uml/docs/assets/img/diagrams/class.png)
 
 ## Component
 
@@ -313,13 +313,13 @@ Represent the dependency of the components.
 
 | keyword    | usage      | image
 |:----------:|:----------:|
-| `[ ]`      | Component  | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/parts/component.png)
-| `package`  | Package    | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/package/package.png)
-| `frame`    | Frame      | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/package/frame.png)
-| `folder`   | Folder     | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/package/folder.png)
-| `database` | Database   | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/package/database.png)
-| `node`     | Node       | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/package/node.png)
-| `cloud`    | Cloud      | ![parts_usecase]({{ site.docsurl }}/assets/img/diagrams/package/cloud.png)
+| `[ ]`      | Component  | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/parts/component.png)
+| `package`  | Package    | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/package/package.png)
+| `frame`    | Frame      | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/package/frame.png)
+| `folder`   | Folder     | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/package/folder.png)
+| `database` | Database   | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/package/database.png)
+| `node`     | Node       | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/package/node.png)
+| `cloud`    | Cloud      | ![parts_usecase](/draw_uml/docs/assets/img/diagrams/package/cloud.png)
 
 * [others](http://plantuml.sourceforge.net/component.html)
 
@@ -350,7 +350,7 @@ node "Node" {
 
 ### Draw
 
-![component_diagram]({{ site.docsurl }}/assets/img/diagrams/component.png)
+![component_diagram](/draw_uml/docs/assets/img/diagrams/component.png)
 
 
 ## Colors
@@ -391,7 +391,7 @@ node "Node 1" {
 ```
 
 ### Draw
-![component_diagram]({{ site.docsurl }}/assets/img/diagrams/colors.png)
+![component_diagram](/draw_uml/docs/assets/img/diagrams/colors.png)
 
 ## Legends
 
@@ -414,7 +414,7 @@ endlegend
 ```
 
 ### Draw
-![component_diagram]({{ site.docsurl }}/assets/img/diagrams/legend.png)
+![component_diagram](/draw_uml/docs/assets/img/diagrams/legend.png)
 
 
 ## Constants
@@ -467,4 +467,4 @@ node "Node 1" {
 ```
 
 ### Draw
-![component_diagram]({{ site.docsurl }}/assets/img/diagrams/sprites.png)
+![component_diagram](/draw_uml/docs/assets/img/diagrams/sprites.png)
