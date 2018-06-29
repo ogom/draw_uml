@@ -398,6 +398,8 @@ node "Node 1" {
 Legend can contain only text, or some tables.
 This example contain a table with some HTML inside and OpenIconic.
 
+OpenIconic Reference: http://plantuml.com/openiconic
+
 ### Code
 
 ```
