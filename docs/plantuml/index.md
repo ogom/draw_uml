@@ -415,3 +415,56 @@ endlegend
 
 ### Draw
 ![component_diagram]({{ site.baseurl }}/assets/img/diagrams/legend.png)
+
+
+## Constants
+It's possible to declare constants that will help us for example to include files or other *.puml
+
+PS: when you use it remove ${}, thats only there for the example
+
+### Code
+```
+!define ${VARIABLE NAME} ${VARIABLE VALUE}
+```
+
+## Sprites & Includes
+There are a lot of useful sprites and images that we can use.
+In the next example you have all the ways to implement components using this open source library.
+
+### Code
+```
+!include <font-awesome/common>
+
+!define ICONURL https://raw.githubusercontent.com/Roemer/plantuml-office/master/office2014
+!includeurl ICONURL/Servers/application_server.puml
+
+' =================
+' == Declaration ==
+' =================
+
+OFF_APPLICATION_SERVER([Component 1], "Component 1", component, #Green)
+
+node "Node 1" {
+    package "Package 1" #Orange {
+        OFF_APPLICATION_SERVER([Component 4], "Component 4")
+        OFF_APPLICATION_SERVER(Component3, "Component 3", component)
+    }
+    OFF_APPLICATION_SERVER([Component 2])
+}
+
+
+
+' ====================
+' == Implementation ==
+' ====================
+
+
+node "Node 1" {
+    [Component 2] .[#Green]-> [Component 4]
+    Component3 <-left-> [Component 4]
+    [Component 4] -- [Component 1]
+}
+```
+
+### Draw
+![component_diagram]({{ site.baseurl }}/assets/img/diagrams/sprites.png)
