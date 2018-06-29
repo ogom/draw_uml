@@ -351,3 +351,65 @@ node "Node" {
 ### Draw
 
 ![component_diagram]({{ site.baseurl }}/assets/img/diagrams/component.png)
+
+
+## Colors
+We can add colors to Arrows, Icons, Sprites, Components, Packages, etc.
+PlantUML support Hexadecimal colors or colors that are already defined.
+
+Site Reference: http://plantuml.com/skinparam
+
+### Code
+
+```
+' =================
+' == Declaration ==
+' =================
+
+[Component 1]
+
+node "Node 1" {
+    package "Package 1" #Orange {
+        [Component 4]
+        [Component 3]
+    }
+    [Component 2]
+}
+
+
+
+' ====================
+' == Implementation ==
+' ====================
+
+
+node "Node 1" {
+    [Component 2] .[#Green]-> [Component 4]
+    [Component 3] <-left-> [Component 4]
+    [Component 4] -- [Component 1]
+}
+```
+
+### Draw
+![component_diagram]({{ site.baseurl }}/assets/img/diagrams/colors.png)
+
+## Legends
+
+Legend can contain only text, or some tables.
+This example contain a table with some HTML inside and OpenIconic.
+
+### Code
+
+```
+legend
+    |= Color |= Type |= Description |
+    | <size:11><back:#Crimson>           </back></size>|    <&arrow-right> | Example 1 |
+    | <size:11><back:#LightSeaGreen>           </back></size>|    <&arrow-right> | Example 2 |
+    | <size:11><back:#DarkGreen>           </back></size>|    <&arrow-right> | Example 3 |
+    | <size:11><back:#YellowGreen>           </back></size>|    <&box> | Example 4 |
+    | <size:11><back:#Chocolate>           </back></size>|    <&box> | Example 5 |
+endlegend
+```
+
+### Draw
+![component_diagram]({{ site.baseurl }}/assets/img/diagrams/legend.png)
