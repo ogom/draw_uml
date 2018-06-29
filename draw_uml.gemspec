@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["ogom@hotmail.co.jp"]
   spec.summary       = %q{Drawing the Unified Modeling Language.}
   spec.description   = %q{Drawing the Unified Modeling Language of Rack.}
-  spec.homepage      = "http://ogom.github.io/draw_uml"
+  spec.homepage      = "http://ptangel.github.io/draw_uml"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
