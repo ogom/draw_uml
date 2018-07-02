@@ -4,6 +4,7 @@ kramdown:
   input: GFM
 highlighter: pygments
 baseurl: "/draw_uml"
+docsurl: '/draw_uml/docs'
 encoding: UTF-8
 exclude:
 - README.md

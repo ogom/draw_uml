@@ -7,7 +7,7 @@ title:  Overview
 
 Drawing the Unified Modeling Language of Rack.
 
-[Browse the documentation.]({{ site.baseurl }}/docs)
+[Browse the documentation.](https://ogom.github.io/draw_uml/docs/)
 
 ## Installation
 
@@ -33,12 +33,12 @@ mount DrawUml::Engine, at: '/rails/draw/uml'
 
 Draw by selecting the model:
 
-![example]({{ site.baseurl }}/assets/img/example.png)
+![example](https://ogom.github.io/draw_uml/docs//assets/img/example.png)
 
 ## Use
 
 * [PlantUML](http://plantuml.sourceforge.net/)
-* [PlantUML Cheat Sheet]({{ site.baseurl }}/plantuml)
+* [PlantUML Cheat Sheet](https://ogom.github.io/draw_uml/docs//plantuml)
 
 ## License
 
