@@ -4,7 +4,7 @@
 
 Drawing the Unified Modeling Language of Rack.
 
-[Browse the documentation.](http://ogom.github.io/draw_uml/)
+[Browse the documentation.](http://ogom.github.io/draw_uml/docs)
 
 ## Installation
 
